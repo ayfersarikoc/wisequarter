@@ -5,6 +5,7 @@ import java.util.List;
 
 public class fibonacciSayisi {
     public static void main(String[] args) {
+        System.out.println("fibonacciList(9) = " + fibonacciList(9));
 
     }
     public static List<Integer> fibonacciList (int x){
@@ -22,9 +23,11 @@ public class fibonacciSayisi {
         }else{
             fibonaccilist.add(first);
             fibonaccilist.add(second);
-            for (int i=1; i<=x-2; i++){
-                fibonaccilist.add(first+second)
+            for (int i=0; i<x-2; i++){
+                fibonaccilist.add(fibonaccilist.get(fibonaccilist.size()-1)+fibonaccilist.get(fibonaccilist.size()-2));
+
             }
+            return fibonaccilist;
         }
 
     }
